@@ -1,5 +1,4 @@
 require_relative 'fixed_array'
-
 describe FixedArray do
   before(:all) do
     @fixed_array = FixedArray.new(5)
