@@ -10,7 +10,16 @@ class FixedArray
     if index < @length && index >= 0
       @array[index]
     else
-      raise OutOfBoundsException
+      raise "Out of Bounds"
+    end
+  end
+
+  def set(index, element)
+    if index < @length && index >= 0
+      @array[index] = element
+      @array[index]
+    else
+      raise "Out of Bounds"
     end
   end
 
