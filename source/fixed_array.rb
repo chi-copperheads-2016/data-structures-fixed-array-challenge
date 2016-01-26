@@ -15,7 +15,10 @@ class FixedArray
   end
 
   def set(index, element)
-    self.get(index) << element
-    element
+    if index <= self.size
+      self.array[index] = element
+    else
+      raise "Index does not exist"
+    end
   end
 end
