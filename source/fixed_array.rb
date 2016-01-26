@@ -1,5 +1,5 @@
 class FixedArray
-  attr_accessor :size, :index, :element, :array
+  attr_accessor :size, :array
 
   def initialize(size, array)
     @size = size
