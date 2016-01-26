@@ -42,4 +42,10 @@ describe FixedArray do
       expect(@array_list.size).to be 6
     end
   end
+
+  describe "#insert" do
+    it "inserts the given element at the given index and returns the element" do
+      expect(@array_list.insert(2, "Hello")).to eq("Hello")
+    end
+  end
 end

@@ -1,5 +1,5 @@
 class FixedArray
-  attr_accessor :length
+  attr_reader :length
   attr_accessor :array
   def initialize(size)
     @length = size
@@ -7,8 +7,8 @@ class FixedArray
   end
 
   def get(index)
-    if index < @length && index >= 0
-      @array[index]
+    if index <= @length && index >= 0
+      array[index]
     else
       raise "Out of Bounds"
     end
@@ -16,8 +16,8 @@ class FixedArray
 
   def set(index, element)
     if index < @length && index >= 0
-      @array[index] = element
-      @array[index]
+      array[index] = element
+      array[index]
     else
       raise "Out of Bounds"
     end

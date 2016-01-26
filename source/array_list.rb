@@ -1,17 +1,22 @@
 require_relative "fixed_array"
 class ArrayList < FixedArray
 
-  def initialize(size)
+  def initialize(size = 0)
     super(size)
   end
 
   def add(element)
-    @array << element
+    array << element
     @length += 1
-    @array.last
+    array.last
   end
 
   def size
-    @length
+    length
+  end
+
+  def insert(index, element)
+    array.insert(index, element)
+    array[index]
   end
 end
