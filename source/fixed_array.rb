@@ -1,5 +1,5 @@
 class FixedArray
-  attr_reader :length
+  attr_accessor :length
   attr_accessor :array
   def initialize(size)
     @length = size
