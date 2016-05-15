@@ -1,17 +1,18 @@
 class FixedArray
-  attr_accessor :size, :array
+  attr_accessor :array
+  attr_accessor :size
 
-  def initialize(size, array)
+  def initialize(size)
     @size = size
-    @array = Array.new(size, array)
+    @array = Array.new(size)
   end
 
   def get(index)
-    if index <= self.size
-      self.array[index]
+    if index < self.size
+      @array[index]
     else
       raise "Index does not exist"
-    end
+   end
   end
 
   def set(index, element)
